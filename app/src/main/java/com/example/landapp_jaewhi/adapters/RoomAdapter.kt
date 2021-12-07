@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.example.landapp_jaewhi.R
 import com.example.landapp_jaewhi.datas.Room
+import java.text.DecimalFormat
 import kotlin.math.floor
 
 class RoomAdapter(
@@ -34,9 +35,9 @@ class RoomAdapter(
         val floorTxt = row.findViewById<TextView>(R.id.floorTxt)
         val descriptionTxt = row.findViewById<TextView>(R.id.descriptionTxt)
 
-        priceTxt.text = roomData.price.toString()
+        priceTxt.text = roomData.getFormattedPrice()
         addressTxt.text = roomData.address
-        floorTxt.text = " ${roomData.floor.toString()}층"
+        floorTxt.text = roomData.getFormattedFloor()
         descriptionTxt.text = roomData.description
 
 
