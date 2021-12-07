@@ -1,5 +1,6 @@
 package com.example.landapp_jaewhi.datas
 
+import java.io.Serializable
 import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.*
@@ -10,7 +11,7 @@ class Room(
     val floor : Int,
     val description : String
 
-    ) {
+    ) : Serializable {
 
     fun getFormattedPrice () : String {
 
